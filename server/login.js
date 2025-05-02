@@ -19,6 +19,9 @@ app.post('/login', (req, res)=>{
         res.status(401).json({message: 'Invalid Credentials'})
     }
 })
+app.post('/ping',(req, res)=>{
+    res.status(200).json({message: 'Pong'})
+})
 
 app.listen(3000, ()=>{
     console.log(('server is running on port 3000'));
