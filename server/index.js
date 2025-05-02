@@ -19,7 +19,7 @@ app.post('/login', (req, res)=>{
         res.status(401).json({message: 'Invalid Credentials'})
     }
 })
-app.post('/ping',async(req, res)=>{
+app.get('/ping',async(req, res)=>{
     res.status(200).send('pong');
 })
 
