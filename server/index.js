@@ -19,8 +19,8 @@ app.post('/login', (req, res)=>{
         res.status(401).json({message: 'Invalid Credentials'})
     }
 })
-app.post('/ping',(req, res)=>{
-    res.status(200).json({message: 'Pong'})
+app.post('/ping',async(req, res)=>{
+    res.status(200).send('pong');
 })
 
 app.listen(3000, ()=>{
